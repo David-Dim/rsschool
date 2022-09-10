@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  width: 80%;
+  grid-template-areas:
+    'a a a'
+    'b b c'
+    'b b c'
+    'd d d';
+  font-weight: bold;
+  text-align: center;
+}
+header {
+  grid-area: a;
+  background-color: rgb(147, 147, 244);
+  height: 100px;
+}
+article {
+  display: flexbox;
+  flex-direction: row;
+  grid-area: b;
+  height: 400px;
+  border: solid 5px rgb(147, 147, 244);
+}
+.educ {
+  border-bottom: solid 5px rgb(147, 147, 244);
+  height: 140px;
+}
+
+.skill {
+  border-bottom: solid 5px rgb(147, 147, 244);
+  height: 130px;
+}
+
+.experience {
+  /* border: solid 5px rgb(147, 147, 244); */
+  height: 130px;
+}
+
+.sidebar {
+  grid-area: c;
+  height: 400px;
+  border: solid 5px rgb(147, 147, 244);
+}
+footer {
+  grid-area: d;
+  height: 200px;
+  border: solid 5px rgb(147, 147, 244);
+}
