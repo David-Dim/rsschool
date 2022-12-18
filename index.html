@@ -19,83 +19,87 @@
   <body>
     <header>
       <div class="container">
-        <ul class="header__contacts">
-          <li class="header__contacts-item">Tashkent, Uzbekistan</li>
-          <li class="header__contacts-item">
-            <a
-              href="tel:+998958180289"
-              class="header__contacts-link"
-              >Tel: +998958180289</a
-            >
-          </li>
-          <li class="header__contacts-item">
-            <a
-              href="mailto:alanchik1@gmail.com"
-              class="header__contacts-link"
-              >alanchik1@gmail.com</a
-            >
-          </li>
-          <li class="header__contacts-item">
-            <a
-              href="https://discord.com"
-              class="header__contacts-link"
-              >David-Dim</a
-            >
-          </li>
-        </ul>
-        <img
-          src="./images/profile.jpg"
-          alt="image"
-          class="header__contacts-img"
-        />
-        <h2>DAVID DIMOKHOMEDOV</h2>
+        <div class="header__inner">
+          <ul class="header__contacts">
+            <li class="header__contacts-item">Tashkent, Uzbekistan</li>
+            <li class="header__contacts-item">
+              <span class="header__contacts-ref">Tel:</span
+              ><a
+                href="tel:+998958180289"
+                class="header__contacts-link"
+              >
+                +998958180289</a
+              >
+            </li>
+            <li class="header__contacts-item">
+              <span class="header__contacts-ref">e-mail:</span>
+              <a
+                href="mailto:alanchik1@gmail.com"
+                class="header__contacts-link"
+                >alanchik1@gmail.com</a
+              >
+            </li>
+            <li class="header__contacts-item">
+              <a
+                href="https://discord.com"
+                class="header__contacts-link discord"
+                >David-Dim</a
+              >
+            </li>
+          </ul>
+          <img
+            src="./images/profile.jpg"
+            alt="image"
+            class="header__profile-img"
+          />
+          <h2>DAVID <br />DIMOKHOMEDOV</h2>
+        </div>
       </div>
     </header>
     <main class="content">
       <div class="container">
-        <div class="content__top">
-          <h1 class="content-heading">Frontend Developer</h1>
-          <h3>EXPERIENCE</h3>
-          <p class="content__top-text">
-            I don't have any commercial expirience of developing Web
-            Applications. But I move towards the main goal - to become a good
-            frontend-developer. Step by step I learning Web technologies and
-            other related frameworks and implements to deeply understand this
-            really intresting work.
-          </p>
-        </div>
+        <h1 class="content__title">Frontend Developer</h1>
+
         <section class="content__skill">
           <h3>TECHNICAL SKILLS</h3>
-          <img
-            src="./images/html5.svg"
-            alt="icon"
-            class="content__skill-img"
-          /><img
-            src="./images/css3.svg"
-            alt="icon"
-            class="content__skill-img"
-          /><img
-            src="./images/figma.svg"
-            alt="icon"
-            class="content__skill-img"
-          /><img
-            src="./images/scss.svg"
-            alt=""
-            class="content__skill-img"
-          /><img
-            src="./images/gulp.svg"
-            alt=""
-            class="content__skill-img"
-          />
-          /><img
-            src="./images/js.svg"
-            alt=""
-            class="content__skill-img"
-          />
-          <code
-            >function SeriesSum(n) { for (var s = 0, i = 0; i < n; i++) { s += 1
-            / (1 + i * 3) } return s.toFixed(2) }</code
-          >
+
+          <div class="content__skill-block">
+            <img
+              src="./images/html5.svg"
+              alt="icon"
+              class="content__skill-img"
+            /><img
+              src="./images/css3.svg"
+              alt="icon"
+              class="content__skill-img"
+            /><img
+              src="./images/figma.svg"
+              alt="icon"
+              class="content__skill-img"
+            /><img
+              src="./images/scss.svg"
+              alt=""
+              class="content__skill-img"
+            /><img
+              src="./images/gulp.svg"
+              alt=""
+              class="content__skill-img"
+            />
+            <img
+              src="./images/js.svg"
+              alt=""
+              class="content__skill-img"
+            />
+          </div>
+          <div class="content__skill-text">
+            <pre class="content__skill-code"><code>
+              function SeriesSum(n) {
+                for (var s = 0, i = 0; i < n; i++) {
+                  s += 1 / (1 + i * 3)
+                }
+                return s.toFixed(2)
+            }</code></pre>
+          </div>
         </section>
         <section class="content__educ">
           <h3>LANGUAGES</h3>
@@ -148,8 +152,15 @@
               alt="Github"
           /></a>
         </section>
-        <section class="content__experience">
+        <section class="content__exper">
           <h3>EXPERIENCE</h3>
+          <p class="content__exper-text">
+            I don't have any commercial expirience of developing Web
+            Applications. But I move towards the main goal - to become a good
+            frontend-developer. Step by step I learning Web technologies and
+            other related frameworks and implements to deeply understand this
+            really intresting work.
+          </p>
         </section>
       </div>
     </main>
