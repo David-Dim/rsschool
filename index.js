@@ -1,0 +1,12 @@
+$(document).ready(function () {
+  $('.content__skill-block').hide()
+  $('.content__skill-block').show(1200)
+  $('.content__educ-progressline1').fadeOut()
+  $('.content__educ-progressline1').fadeIn(900)
+  $('.content__educ-progressline2').fadeOut()
+  $('.content__educ-progressline2').fadeIn(1100)
+  $('.content__educ-progressline3').fadeOut()
+  $('.content__educ-progressline3').fadeIn(1200)
+  $('.content__educ-progressline4').fadeOut()
+  $('.content__educ-progressline4').fadeIn(1400)
+})

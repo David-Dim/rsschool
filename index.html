@@ -67,28 +67,28 @@
             <img
               src="./images/html5.svg"
               alt="icon"
-              class="content__skill-img"
+              class="content__skill-img skill-img-1"
             /><img
               src="./images/css3.svg"
               alt="icon"
-              class="content__skill-img"
+              class="content__skill-img skill-img-2"
             /><img
               src="./images/figma.svg"
               alt="icon"
-              class="content__skill-img"
+              class="content__skill-img skill-img-3"
             /><img
               src="./images/scss.svg"
               alt=""
-              class="content__skill-img"
+              class="content__skill-img skill-img-4"
             /><img
               src="./images/gulp.svg"
               alt=""
-              class="content__skill-img"
+              class="content__skill-img skill-img-5"
             />
             <img
               src="./images/js.svg"
               alt=""
-              class="content__skill-img"
+              class="content__skill-img skill-img-6"
             />
           </div>
           <div class="content__skill-text">
@@ -103,22 +103,32 @@
         </section>
         <section class="content__educ">
           <h3>LANGUAGES</h3>
-          <ul class="content__educ-languages">
-            <li class="content__educ-language">
-              ENGLISH <span class="lang"> B1 </span>
-            </li>
-            <li class="content__educ-language">
-              RUSSIAN <span class="lang"> Native </span>
-            </li>
-            <li class="content__educ-language">
-              TURKISH <span class="lang"> B1 </span>
-            </li>
-            <li class="content__educ-language">
-              UZBEK
-              <span class="lang"> B1 </span>
-            </li>
-          </ul>
+          <div class="content__educ-items">
+            <ul class="content__educ-languages">
+              <li class="content__educ-language">
+                ENGLISH <span class="lang"> B1 </span>
+              </li>
+              <li class="content__educ-language">
+                RUSSIAN <span class="lang"> Native </span>
+              </li>
+              <li class="content__educ-language">
+                TURKISH <span class="lang"> A2 </span>
+              </li>
+              <li class="content__educ-language">
+                UZBEK
+                <span class="lang uzb-lang"> B1 </span>
+              </li>
+            </ul>
+            <div class="content__educ-progress">
+              <div class="content__educ-progressline1"></div>
+              <div class="content__educ-progressline2"></div>
+              <div class="content__educ-progressline3"></div>
+              <div class="content__educ-progressline4"></div>
+            </div>
+          </div>
+
           <h3>EDUCATION</h3>
+
           <a
             class="content__educ-btn"
             href="https://www.codewars.com/users/rsschool_481be257564d28e7"
@@ -132,25 +142,20 @@
           <a
             class="content__educ-btn"
             href="https://www.freecodecamp.org/David_Dim"
-            ><img class="content__educ-img"
-            src="https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green
-            alt="Freecodecamp" /></a
           >
+            <img class="content__educ-img"
+            src="https://img.shields.io/badge/Freecodecamp-%23123.svg?&style=for-the-badge&logo=freecodecamp&logoColor=green
+            alt="Freecodecamp" />
+          </a>
           <a
             class="content__educ-btn"
             href="https://www.udemy.com/user/david-dimokhomedov/"
             ><img
               class="content__educ-img"
               src="https://img.shields.io/badge/Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white"
-              alt="udemy" /></a
-          ><a
-            class="content__educ-btn"
-            href="https://github.com/David-Dim"
-            ><img
-              class="content__educ-img"
-              src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
-              alt="Github"
-          /></a>
+              alt="udemy"
+            />
+          </a>
         </section>
         <section class="content__exper">
           <h3>EXPERIENCE</h3>
@@ -162,9 +167,21 @@
             really intresting work.
           </p>
         </section>
+        <footer>
+          <a
+            class="content__educ-btn"
+            href="https://github.com/David-Dim"
+            ><img
+              class="content__educ-img"
+              src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+              alt="Github"
+          /></a>
+          <p class="footer__text">Welcome to my GitHub!</p>
+        </footer>
       </div>
     </main>
 
-    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
