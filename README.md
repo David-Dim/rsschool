@@ -1,1 +1,1 @@
-# rsschool
+https://github.com/David-Dim/rsschool-cv/
