@@ -8,12 +8,16 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #edf2ec;
   max-width: 1440px;
+  width: 100%;
+  position: relative;
   font-family: "Inter", sans-serif;
+  font-size: 16px;
   font-weight: 400;
   color: #636060;
   line-height: 25px;
@@ -31,6 +35,11 @@ button {
   vertical-align: middle;
   background: transparent;
   cursor: pointer;
+  transition: all 0.2s;
+}
+button:hover {
+  background-color: #e06733;
+  color: #fff;
 }
 
 h3 {
@@ -42,6 +51,12 @@ h3 {
   text-align: center;
 }
 
+@media (min-width: 320px) {
+  .container {
+    width: 86%;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 768px) {
   h3 {
     font-family: "Inika", serif;
@@ -50,15 +65,23 @@ h3 {
     line-height: 52px;
     font-weight: 400;
   }
+  button {
+    font-size: 20px;
+    width: 160px;
+    height: 50px;
+  }
 }
 .green-text {
   color: #499a18;
 }
 
-@media (min-width: 320px) {
+@media (min-width: 1440px) {
+  body {
+    font-size: 20px;
+    line-height: 35px;
+  }
   .container {
-    width: 86%;
-    margin: 0 auto;
+    max-width: 1222px;
   }
 }
 .header__inner {
@@ -70,6 +93,9 @@ h3 {
 
 .logo {
   display: flex;
+}
+.logo__link {
+  text-decoration: none;
 }
 .logo__title {
   font-family: "Inika", serif;
@@ -95,6 +121,23 @@ h3 {
 @media (min-width: 768px) {
   .menu {
     display: none;
+  }
+  .navbar {
+    display: block;
+  }
+  .navbar__menu {
+    display: flex;
+    list-style-type: none;
+  }
+  .navbar__item {
+    margin-left: 46px;
+  }
+  .navbar__link {
+    text-decoration: none;
+    color: #010201;
+  }
+  .navbar__link.active, .navbar__link:hover {
+    color: #e06733;
   }
 }
 .welcome {
@@ -131,6 +174,54 @@ h3 {
   vertical-align: middle;
 }
 
+@media (min-width: 768px) {
+  .welcome {
+    display: flex;
+  }
+  .welcome__image {
+    display: block;
+    width: 280px;
+  }
+  .welcome__img {
+    order: 2;
+  }
+  .welcome__title {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  .welcome__btn {
+    width: 158px;
+    height: 54px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1440px) {
+  .welcome {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .welcome__img {
+    order: -1;
+  }
+  .welcome__image {
+    width: 407px;
+    height: 450px;
+  }
+  .welcome__inner {
+    width: 550px;
+    margin-top: 98px;
+    margin-bottom: 94px;
+  }
+  .welcome__title {
+    margin-bottom: 42px;
+    font-size: 45px;
+  }
+  .welcome__text {
+    margin-bottom: 48px;
+  }
+}
 .about {
   background-color: #fff;
   padding: 30px 25px;
@@ -143,8 +234,44 @@ h3 {
 }
 .about__title {
   padding-bottom: 21px;
+  font-size: 35px;
+  line-height: 45px;
+  padding-bottom: 0;
 }
 
+@media (min-width: 768px) {
+  .about {
+    padding: 40px 50px 95px;
+  }
+  .about__title {
+    width: 425px;
+    margin: 0 auto;
+  }
+  .about__text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .about {
+    display: flex;
+    justify-content: space-between;
+    padding: 95px 110px;
+  }
+  .about__inner {
+    width: 605px;
+    align-self: center;
+  }
+  .about__title {
+    margin: 0;
+    font-size: 40px;
+    text-align: left;
+  }
+  .about__img {
+    width: 465px;
+    height: 480px;
+  }
+}
 .service__title {
   text-align: left;
   width: 190px;
@@ -154,17 +281,19 @@ h3 {
   margin: 5px 4px 5px 0;
 }
 .service__card {
+  min-width: 280px;
+  max-width: 330px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  margin: 34px 0;
+  margin: 54px 0;
   border: 1px solid #e3e1d5;
   border-radius: 20px;
 }
 .service__img {
   border-radius: 20px 20px 0 0;
-  min-width: 280px;
+  width: 100%;
 }
 .service__card-title {
   font-size: 20px;
@@ -173,10 +302,44 @@ h3 {
   margin: 10px 0;
 }
 .service__card-text {
+  font-size: 16px;
   text-align: center;
-  padding: 0 39px;
 }
 
+@media (min-width: 768px) {
+  .service__title {
+    width: 300px;
+  }
+  .service__cards {
+    display: grid;
+    padding: 40px 0 70px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 38px 106px;
+  }
+  .service__card {
+    margin: 0;
+  }
+  .service__btn {
+    margin-right: 38px;
+  }
+}
+@media (min-width: 1440px) {
+  .service {
+    padding: 40px 0 120px;
+  }
+  .service__title {
+    font-size: 40px;
+    line-height: 120%;
+    margin-right: 100px;
+  }
+  .service__top {
+    display: flex;
+    align-items: center;
+  }
+  .service__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .prices {
   background-color: #fff;
   display: flex;
@@ -186,7 +349,6 @@ h3 {
   padding-top: 5px;
 }
 .prices__right {
-  width: 230px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -195,12 +357,62 @@ h3 {
 .prices__title {
   color: #000;
   text-align: center;
+  font-size: 25px;
+  margin-top: 25px;
+}
+.prices__right-title {
   font-size: 20px;
+  color: #000;
+}
+.prices__img {
+  display: none;
 }
 .prices__btn {
   margin-top: 14px;
 }
 
+@media (min-width: 768px) {
+  .prices {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: 40px 50px 88px 50px;
+  }
+  .prices__title {
+    text-align: left;
+  }
+  .prices__img {
+    display: block;
+    height: 174px;
+    width: 152px;
+    margin-top: 34px;
+  }
+  .prices__title {
+    font-size: 35px;
+  }
+  .prices__right {
+    margin-top: 140px;
+    align-items: end;
+  }
+  .prices__right-title {
+    text-align: right;
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .prices {
+    padding: 40px 110px 115px;
+  }
+  .prices__title {
+    font-size: 40px;
+    line-height: 120%;
+  }
+  .prices__right-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
 .contacts {
   padding-top: 25px;
   display: flex;
@@ -209,7 +421,6 @@ h3 {
   justify-content: center;
 }
 .contacts__title {
-  padding-bottom: 80px;
   font-weight: 700;
   font-size: 25px;
 }
@@ -226,7 +437,8 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  margin-bottom: 49px;
+  margin-bottom: 132px;
+  margin-top: 80px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.4);
 }
 .contacts__btn-title {
@@ -279,19 +491,52 @@ h3 {
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  .contacts__title {
+    font-size: 40px;
+    padding-bottom: 100px;
+  }
+  .contacts__block {
+    width: 450px;
+    height: 50px;
+    margin-bottom: 250px;
+  }
+  .contacts__address {
+    height: 214px;
+    width: 450px;
+  }
+}
+@media (min-width: 1440px) {
+  .contacts {
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .contacts__block {
+    margin-top: 150px;
+  }
+  .contacts__title {
+    margin-top: 60px;
+  }
+  .contacts__img {
+    min-width: 400px;
+    height: 500px;
+    order: -1;
+  }
+}
 .prices__item {
-  border-color: #EDF2EC;
   background-color: bg-color;
   width: 180px;
   font-size: 7px !important;
 }
 .prices__item_closed {
+  background-color: #edf2ec;
   border-radius: 20px;
   padding: 16px 40px;
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 14px;
 }
 .prices__item_closed h5 {
   font-size: 15px;
@@ -300,6 +545,7 @@ h3 {
   border-radius: 20px;
   padding: 20px 20px;
   background-color: #d6e7d2;
+  display: none;
 }
 .prices__item_opened h5 {
   color: #aea1a1;
@@ -307,6 +553,9 @@ h3 {
 }
 .prices__item_opened .prices__arrow {
   background-color: #aea1a1;
+}
+.prices__right-title {
+  margin-top: 0;
 }
 .prices__item-top {
   display: flex;
@@ -327,9 +576,6 @@ h3 {
 }
 .prices__block {
   padding: 29px 22px;
-  border: 1px solid #e3e1d5;
-  border-radius: 20px;
-  margin: 40px 0 19px;
 }
 .prices__left {
   align-self: center;
@@ -338,6 +584,18 @@ h3 {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .prices__block {
+    border: 1px solid #e3e1d5;
+    border-radius: 20px;
+    padding: 34px 41px;
+    margin-top: 50px;
+  }
+  .prices__item {
+    border-color: #EDF2EC;
+    width: 250px;
+  }
+}
 .footer {
   background-color: #fff;
 }
@@ -349,4 +607,18 @@ h3 {
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .footer {
+    height: 180px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    height: 130px;
+  }
+}
+.footer__inner {
+  padding: 40px 110px;
+  flex-flow: row;
 }/*# sourceMappingURL=style.css.map */
