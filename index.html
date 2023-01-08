@@ -58,7 +58,7 @@
             <ul class="navbar__menu">
               <li class="navbar__item">
                 <a
-                  class="navbar__link active"
+                  class="navbar__link home active"
                   href="#"
                   >Home</a
                 >
@@ -148,13 +148,28 @@
               <span class="green-text">Service and our projects</span>
             </h3>
             <div class="service__buttons">
-              <button class="service__btn">Gardens</button>
-              <button class="service__btn">Lawn</button>
-              <button class="service__btn">Planting</button>
+              <button
+                data-filter="gardens"
+                class="service__btn"
+              >
+                Gardens
+              </button>
+              <button
+                data-filter="lawn"
+                class="service__btn"
+              >
+                Lawn
+              </button>
+              <button
+                data-filter="planting"
+                class="service__btn"
+              >
+                Planting
+              </button>
             </div>
           </div>
           <div class="service__cards">
-            <div class="service__card">
+            <div class="service__card gardens lawn">
               <img
                 src="./images/servuce-1.jpg"
                 alt="garden care"
@@ -165,7 +180,7 @@
                 Lorem Ipsum has been the industry
               </p>
             </div>
-            <div class="service__card">
+            <div class="service__card gardens planting">
               <img
                 src="./images/service-2.jpg"
                 alt="planting"
@@ -176,7 +191,7 @@
                 Lorem Ipsum has been the industry
               </p>
             </div>
-            <div class="service__card">
+            <div class="service__card gardens lawn">
               <img
                 src="./images/service-3.jpg"
                 alt="lawn care"
@@ -187,7 +202,7 @@
                 Lorem Ipsum has been the industry
               </p>
             </div>
-            <div class="service__card">
+            <div class="service__card gardens planting">
               <img
                 src="./images/service-4.jpg"
                 alt="planting"
@@ -198,7 +213,7 @@
                 Lorem Ipsum has been the industry
               </p>
             </div>
-            <div class="service__card">
+            <div class="service__card gardens lawn">
               <img
                 src="./images/service-5.jpg"
                 alt="garden care"
@@ -209,7 +224,7 @@
                 Lorem Ipsum has been the industry
               </p>
             </div>
-            <div class="service__card">
+            <div class="service__card gardens planting">
               <img
                 src="./images/service-6.jpg"
                 alt="planting"
@@ -367,31 +382,155 @@
           <h3 class="contacts__title">
             <span class="green-text">Contact us</span>
           </h3>
-          <div class="contacts__block">
-            <span class="contacts__btn-title">City</span>
-            <div class="contacts__arrow">
-              <img
-                src="./images/city-arrow.svg"
-                alt="arrow down"
-              />
+          <div class="contacts__inner">
+            <div class="contacts__block">
+              <span class="contacts__btn-title">City</span>
+              <div class="contacts__arrow">
+                <img
+                  class="arrow1"
+                  src="./images/city-arrow.svg"
+                  alt="arrow down"
+                /><img
+                  class="arrow2"
+                  src="./images/arrow-up.svg"
+                  alt="arrow up"
+                />
+              </div>
             </div>
-          </div>
-          <div class="contacts__address">
-            <div class="contacts__address-inner">
-              <div class="contacts__address-hed">
-                <span>City:</span>
-                <span>Phone:</span>
-                <span class="contacts__office"
-                  >Office <span>address:</span></span
+            <ul class="contacts__dropdown">
+              <li
+                class="contacts__dropdown-item"
+                id="canan"
+              >
+                <a
+                  id="canan"
+                  class="contacts__dropdown-link"
+                  >Canandaigua, NY</a
                 >
+              </li>
+              <li
+                class="contacts__dropdown-item"
+                id="nyc"
+              >
+                <a
+                  id="nyc"
+                  class="contacts__dropdown-link"
+                  >New York City</a
+                >
+              </li>
+              <li
+                class="contacts__dropdown-item"
+                id="yon"
+              >
+                <a
+                  id="yon"
+                  class="contacts__dropdown-link"
+                  >Yonkers, NY</a
+                >
+              </li>
+              <li
+                class="contacts__dropdown-item"
+                id="sher"
+              >
+                <a
+                  id="sher"
+                  class="contacts__dropdown-link"
+                  >Sherill, NY</a
+                >
+              </li>
+            </ul>
+            <div class="contacts__address canan">
+              <div class="contacts__address-inner">
+                <div class="contacts__address-hed">
+                  <span>City:</span>
+                  <span>Phone:</span>
+                  <span class="contacts__office"
+                    >Office <span>address:</span></span
+                  >
+                </div>
+                <div class="contacts__address-content">
+                  <p>Canandaigua, NY</p>
+                  <p>+1 585 393 0001</p>
+                  <p>151 Charlotte Street</p>
+                </div>
               </div>
-              <div class="contacts__address-content">
-                <p>Canandaigua, NY</p>
-                <p>+1 585 393 0001</p>
-                <p>151 Charlotte Street</p>
-              </div>
+              <button class="contacts__btn">
+                <a
+                  class="contacts__link"
+                  href="tel:+15853930001"
+                  >Call us</a
+                >
+              </button>
             </div>
-            <button class="contacts__btn">Call us</button>
+            <div class="contacts__address nyc">
+              <div class="contacts__address-inner">
+                <div class="contacts__address-hed">
+                  <span>City:</span>
+                  <span>Phone:</span>
+                  <span class="contacts__office"
+                    >Office <span>address:</span></span
+                  >
+                </div>
+                <div class="contacts__address-content">
+                  <p>New York City, NY</p>
+                  <p>+1 212 456 0002</p>
+                  <p>9 East 91st Street</p>
+                </div>
+              </div>
+              <button class="contacts__btn">
+                <a
+                  class="contacts__link"
+                  href="tel:+15853930001"
+                  >Call us</a
+                >
+              </button>
+            </div>
+            <div class="contacts__address yon">
+              <div class="contacts__address-inner">
+                <div class="contacts__address-hed">
+                  <span>City:</span>
+                  <span>Phone:</span>
+                  <span class="contacts__office"
+                    >Office <span>address:</span></span
+                  >
+                </div>
+                <div class="contacts__address-content">
+                  <p>Yonkers, NY</p>
+                  <p>9 East 91st Street</p>
+                  <p>511 Warburton Ave</p>
+                </div>
+              </div>
+              <button class="contacts__btn">
+                <a
+                  class="contacts__link"
+                  href="tel:+15853930001"
+                  >Call us</a
+                >
+              </button>
+            </div>
+            <div class="contacts__address sher">
+              <div class="contacts__address-inner">
+                <div class="contacts__address-hed">
+                  <span>City:</span>
+                  <span>Phone:</span>
+                  <span class="contacts__office"
+                    >Office <span>address:</span></span
+                  >
+                </div>
+                <div class="contacts__address-content">
+                  <p>Sherrill, NY</p>
+                  <p>+1 315 908 0004</p>
+                  <p>14 WEST Noyes BLVD</p>
+                </div>
+              </div>
+              <button class="contacts__btn">
+                <a
+                  class="contacts__link"
+                  href="tel:+15853930001"
+                  >Call us</a
+                >
+              </button>
+            </div>
           </div>
         </section>
       </div>
